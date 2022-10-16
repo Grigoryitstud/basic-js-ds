@@ -20,11 +20,7 @@ class Queue {
   }
 
   getUnderlyingList() {
-    let main = this.head;
-      while(main.next) {
-        alert(main.value)
-        main = main.next;
-      }
+    return this.head
   }
 
   enqueue(x) {
@@ -42,7 +38,9 @@ class Queue {
 
   dequeue() {
     let main = this.head;
-    this.head = main.next
+    let x = main.value;
+    this.head = main.next;
+    return x
   }
 }
 
